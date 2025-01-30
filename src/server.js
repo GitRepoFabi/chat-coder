@@ -6,7 +6,7 @@ import {Server} from 'socket.io';
 
 const app = express();
 const port = process.env.PORT;
-const httpServer = app.listen(port,()=> console.log("Escuchando en puerto 8080"));
+const httpServer = app.listen(port,()=> console.log(`Escuchando en puerto ${port}`));
 
 const io = new Server(httpServer);
 
