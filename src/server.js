@@ -5,7 +5,8 @@ import viewRouter from './routes/views.router.js'
 import {Server} from 'socket.io';
 
 const app = express();
-const httpServer = app.listen(80,()=> console.log("Escuchando en puerto 8080"));
+const port = process.env.PORT;
+const httpServer = app.listen(port,()=> console.log("Escuchando en puerto 8080"));
 
 const io = new Server(httpServer);
 
